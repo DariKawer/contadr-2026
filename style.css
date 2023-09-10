@@ -1,0 +1,205 @@
+:root {
+    --color-white: #fff;
+    --color-black: #202020;
+    --color-glass: rgba(255, 255, 255, 0.05);
+    --color-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+    --l: rgba(185, 185, 185, 0.89);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    color: var(--color-white);
+}
+
+body {
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: rgb(88, 101, 107);
+
+}
+
+.snow, .snow2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(imgs1/snow.png);
+    background-position: 0 0;
+}
+
+.snow {
+    background-size: 70em;
+    animation: snowfall 20s linear infinite;
+}
+
+.snow2 {
+    background-size: 50em;
+    animation: snowfall2 30s linear infinite;
+    opacity: 0.5;
+}
+
+.wrapper {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    font-size: 16px;
+}
+
+.heading {
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+.heading h3 {
+    font-size: 1.6em;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    font-weight: 600;
+    border-radius: 50px;
+    backdrop-filter: blur(12px);
+    box-shadow: var(--color-shadow);
+    padding: 8px 30px;
+    display: inline-block;
+}
+
+.textbox h1 {
+    font-size: 190px;
+    line-height: 180px;
+    margin-left: -10px;
+    color: transparent;
+    text-align: center;
+    -webkit-text-stroke: 5px black;
+    background-image: url(imgs1/back.png);
+    -webkit-background-clip: text;
+    background-size: 100px;
+    background-color: red;
+    animation: back 20s linear infinite;
+}
+
+.countdown {
+    width: 75vw;
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+.box {
+    width: 23vmin;
+    height: 29vmin;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    position: relative;
+}
+
+span.num {
+    background: linear-gradient(100deg, 
+    rgba(100, 100, 216, 0.7), 
+    rgb(90, 90, 216, 0.7), 
+    rgb(80, 80, 216, 0.7), 
+    rgb(60, 60, 202, 0.7), 
+    rgb(80, 80, 216, 0.7), 
+    rgb(90, 90, 216, 0.7), 
+    rgb(100, 100, 216, 0.7));
+    animation: animate 6s linear infinite;
+    background-size: 200%;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    font-size: 4em;
+    box-shadow: var(--color-shadow);
+    border-radius: 2em;
+    border: 4px solid black;
+}
+
+span.text {
+    font-size: 1em;
+    background-color: var(--color-white);
+    color: var(--color-black);
+    display: block;
+    width: 80%;
+    position: relative;
+    text-align: center;
+    bottom: 20px;
+    padding: 0.7em 0;
+    font-weight: 600;
+    border-radius: 1em;
+    border: 2px solid black;
+    box-shadow: var(--color-shadow);
+}
+
+.montains {
+    background: rgb(255, 255, 255);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    clip-path: polygon(0 83%, 8% 89%, 18% 89%, 27% 86%, 34% 89%, 42% 85%, 46% 81%, 53% 87%, 60% 89%, 68% 85%, 74% 86%, 79% 90%, 86% 86%, 94% 82%, 100% 88%, 100% 100%, 0 100%);
+}
+
+.mifecha {
+    text-align: center;
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2.5em;
+    font-weight: bold;
+    margin: 0 auto;
+    bottom: 4%;
+    margin-left: 30%;
+    position: absolute;
+    -webkit-box-reflect: below -7px -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(255, 255, 255, 0.5)));
+}
+
+.light {
+    background: rgb(255, 255, 255);
+    position: absolute;
+    height: 40%;
+    width: 20%;
+    z-index: -1;
+    margin: 0 auto;
+    bottom: 10%;
+    position: absolute;
+    clip-path: polygon(51% 17%, 70% 41%, 57% 41%, 76% 63%, 57% 63%, 81% 84%, 57% 83%, 57% 100%, 43% 100%, 43% 83%, 16% 83%, 42% 63%, 23% 62%, 43% 41%, 30% 41%);
+    /*clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);*/
+    /* clip-path: polygon(26% 65%, 19% 54%, 16% 43%, 18% 27%, 28% 14%, 41% 9%, 55% 8%, 71% 15%, 78% 28%, 79% 42%, 75% 54%, 69% 65%, 63% 75%, 60% 88%, 34% 88%, 30% 75%); */
+}
+
+@keyframes snowfall {
+    100% {
+        background-position: 70em 70em;
+    }
+}
+
+@keyframes snowfall2 {
+    100% {
+        background-position: 50em 0;
+    }
+}
+
+@keyframes back {
+    100% {
+        background-position: 700px 0;
+    }
+}
+
+@keyframes animate {
+    0% {
+        background-position: 0 0;
+    }
+    0% {
+        background-position: 200% 0;
+    }
+
+}
+
+@keyframes rotate {
+    0% { transform: rotate(odeg);}
+    100% { transform: rotate(360deg);}
+}
